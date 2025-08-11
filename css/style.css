@@ -1,0 +1,354 @@
+:root {
+    --primary-color: #FF6600; /* Orange accent */
+    --dark-color: #333;
+    --light-color: #f4f4f4;
+    --white-color: #fff;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    background: var(--white-color);
+    box-shadow: var(--box-shadow);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-placeholder {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: var(--dark-color);
+    padding: 1rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white-color);
+}
+
+.hero-banner-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #444; /* Placeholder color */
+    background-image: url('https://via.placeholder.com/1920x1080/444444/FFFFFF?text=ENSTP+Study+Banner'); /* Placeholder image */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: brightness(0.5);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+#search-bar {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+}
+
+#search-button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+#search-button:hover {
+    background: #e65c00;
+}
+
+/* Navigation Cards */
+.navigation-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 4rem 0;
+}
+
+.card {
+    background: var(--white-color);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: var(--dark-color);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+/* Footer */
+.footer {
+    background: var(--dark-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.social-links {
+    margin: 1rem 0;
+}
+
+.social-links a {
+    color: var(--white-color);
+    margin: 0 0.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+.prayer {
+    margin: 1rem 0;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--light-color);
+}
+
+.feedback a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Page titles */
+.page-title {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.page-description {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* Info sections */
+.info-section {
+    background: var(--white-color);
+    padding: 2rem;
+    border-radius: 5px;
+    margin-top: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.info-text {
+    white-space: pre-wrap;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+/* Subject cards and grids */
+.year-section {
+    margin-bottom: 3rem;
+}
+
+.semester-section {
+    margin-bottom: 2rem;
+}
+
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.subject-card {
+    background: var(--white-color);
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+}
+
+.subject-card h4 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--light-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.subject-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.subject-card li a {
+    color: var(--dark-color);
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.subject-card li a:hover {
+    color: var(--primary-color);
+}
+
+.subject-card.coming-soon {
+    opacity: 0.6;
+}
+
+/* Resources page sections */
+.resources-section {
+    margin-bottom: 3rem;
+}
+
+.resources-section h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.resources-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resources-section li a {
+    color: var(--dark-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.resources-section li a:hover {
+    color: var(--primary-color);
+}
+
+/* Search Results */
+.search-results {
+    margin-top: 3rem;
+}
+
+.search-results h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.search-results ul {
+    list-style: none;
+    padding: 0;
+}
+
+.search-results li {
+    background: var(--white-color);
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 1rem;
+}
+
+.search-results a {
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+.search-results a:hover {
+    color: var(--primary-color);
+}
+
+.search-results small {
+    color: #777;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .nav-links {
+        display: none; /* Will implement a mobile menu later */
+    }
+}
